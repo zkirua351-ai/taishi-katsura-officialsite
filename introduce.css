@@ -1,0 +1,1193 @@
+@charset "utf-8";
+
+/* 全体のフォント設定 */
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.05em;
+    /* --- ここでお好みの色に設定 --- */
+    background-color: #fecc00; /* オフホワイト（目に優しくてオシャレ） */
+}
+
+/* 背景画像エリア */
+.first-view {
+    height: calc(100vh - 70px);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(IMG_5142.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* 上下中央 */
+}
+
+/* 文字とボタンのエリア */
+.first-view-text {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 60px; /* 左寄りに配置 */
+    text-align: left;
+}
+
+.first-view-text h1 {
+    color: #fecc00;
+    font-size: 4.5rem;
+    margin: 0;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.first-view-text p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+    /* 右に少しずらしたい場合はここを有効にする */
+    /* position: relative; left: 50px; */
+}
+
+/* こだわりのボタン */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #006aa7;
+    color: #fecc00 !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 2px solid #fecc00;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background-color: #fecc00;
+    color: #006aa7 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+/* --- ヘッダー：左右に広がるゆったりデザイン --- */
+header {
+    background-color: #006aa7;
+    padding: 30px 0; /* 厚みを持たせる */
+    border-bottom: 2px solid rgba(254, 204, 0, 0.3);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* ロゴとメニューを両端に */
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* --- ヘッダーのメニューに反応をつける --- */
+.header-site-menu a {
+    text-decoration: none;
+    color: #fecc00;
+    font-weight: bold;
+    margin-left: 40px;
+    display: inline-block; /* 動きをつけるために必要 */
+    transition: all 0.3s ease; /* 変化をなめらかにする */
+}
+.header-site-menu a:hover {
+    color: #ffffff; /* マウスを置くと白く光る */
+    transform: translateY(-3px); /* 3px上にピコッと動く */
+    text-shadow: 0 0 8px rgba(254, 204, 0, 0.6); /* 黄金色にうっすら光らせる */
+}
+
+/* --- フッター：中央寄せデザイン（演出だけヘッダー風） --- */
+footer {
+    background-color: #006aa7;
+    padding: 80px 0 40px; /* 厚みのある中央寄せスタイル */
+    margin-top: 50px;
+    border-top: 2px solid rgba(254, 204, 0, 0.3);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* 中央にまとめる */
+}
+
+.footer-site-menu {
+    margin-bottom: 40px;
+}
+
+.footer-site-menu a {
+    text-decoration: none;
+    color: #fecc00;
+    font-weight: bold;
+    margin: 0 30px; /* 横に並ぶ間隔 */
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease; /* なめらか演出 */
+}
+
+/* ★ここがヘッダーと同じ演出★ */
+.footer-site-menu a:hover {
+    color: #ffffff;             /* 白く光る */
+    transform: translateY(-3px); /* 上にピコッと動く */
+    text-shadow: 0 0 8px rgba(254, 204, 0, 0.6); /* 黄金色の光り */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(254, 204, 0, 0.3);
+    padding-top: 30px;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 0;
+}
+/* 自己紹介ページの特別レイアウト */
+.about-page-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 左側のビジュアルエリア */
+.about-visual {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fecc00;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 右側のコンテンツエリア */
+.about-content {
+    flex: 1;
+    padding: 100px 80px;
+    background-color: #f7f7f7; /* 先ほど決めたオフホワイト */
+}
+
+.content-inner {
+    max-width: 600px;
+}
+
+.profile-block h3, .history-block h3 {
+    font-size: 2rem;
+    color: #006aa7;
+    margin-bottom: 30px;
+    border-left: 5px solid #fecc00;
+    padding-left: 15px;
+}
+
+/* タイムラインのオシャレな装飾 */
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid #006aa7;
+}
+
+.timeline-item .date {
+    display: block;
+    font-weight: bold;
+    color: #006aa7;
+    margin-bottom: 5px;
+}
+
+.timeline-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+/* 文章と写真を横に並べる設定 */
+.profile-flex {
+    display: flex;
+    align-items: center; /* 垂直方向の中央 */
+    gap: 40px;           /* 文章と写真の間隔 */
+    margin-bottom: 60px;
+}
+
+.profile-text {
+    flex: 1; /* 文章が広がる */
+}
+
+.profile-image {
+    flex: 0 0 300px; /* 写真の幅を300pxに固定（お好みで調整） */
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 角を少し丸くすると北欧風に合う */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+/* スマホで見た時は縦に並べる設定 */
+@media (max-width: 768px) {
+    .profile-flex {
+        flex-direction: column-reverse;
+    }
+    .profile-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+/* 自己紹介エリア全体の余白 */
+.about-content {
+    padding: 100px 20px;
+}
+
+.content-inner {
+    max-width: 900px; /* 少し広めに設定するとバランスが良いです */
+    margin: 0 auto;
+}
+
+/* --- 写真を右に置くためのレイアウト --- */
+.profile-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.profile-text-content {
+    flex: 1;
+}
+
+/* 見出しの横棒（黄色）のデザイン維持 */
+.profile-text-content h3, .history-block h3 {
+    border-left: 5px solid #fecc00;
+    padding-left: 15px;
+    font-size: 2rem;
+    color: #006aa7;
+    margin-bottom: 20px;
+}
+
+.profile-text-content p {
+    line-height: 1.8;
+    color: #333;
+}
+
+/* 写真のスタイル */
+.profile-photo {
+    flex: 0 0 350px; /* 写真の横幅 */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0px #fecc00; /* 黄色のアクセント影 */
+}
+
+/* タイムライン（My Journey）のスタイル */
+.timeline-item {
+    border-left: 2px solid #006aa7;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    color: #006aa7;
+}
+
+/* スマホ対応：画面が狭いときは写真を上に持ってくる */
+@media (max-width: 768px) {
+    .profile-flex-container {
+        flex-direction: column-reverse;
+    }
+    .profile-photo {
+        width: 100%;
+        flex: none;
+        margin-bottom: 20px;
+    }
+}
+/* =================================================
+   About Me ページ全体の基本設定
+   ================================================= */
+.about-content {
+    padding: 100px 20px;
+    background-color: #f7f7f7;
+}
+
+.content-inner {
+    max-width: 1000px; /* 写真と文章を並べるため少し広めに設定 */
+    margin: 0 auto;
+}
+
+/* =================================================
+   共通の見出し（Introduction / My Profile）
+   ================================================= */
+h3 {
+    border-left: 8px solid #fecc00; /* スウェーデンイエローのアクセント */
+    padding-left: 15px;
+    font-size: 2.2rem;
+    color: #006aa7; /* スウェーデンブルー */
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =================================================
+   レイアウト：文章と写真の横並び（フレックスボックス）
+   ================================================= */
+.profile-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 縦のラインを上に揃える */
+    gap: 60px;
+    margin-bottom: 120px; /* セクション間の余白 */
+}
+
+/* 2つ目のセクション（My Profile）を左写真・右文章にする設定 */
+.profile-flex-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.profile-text-content {
+    flex: 1;
+}
+
+.profile-text-content p {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+/* =================================================
+   写真のスタイル（共通）
+   ================================================= */
+.profile-photo {
+    flex: 0 0 380px; /* 写真の横幅を固定 */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    /* 北欧デザイン風：右下に黄色のベタ影をつけてアクセントに */
+    box-shadow: 15px 15px 0px #fecc00;
+}
+
+/* =================================================
+   タイムライン（My Profile内）のデザイン
+   ================================================= */
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    border-left: 2px solid #006aa7; /* 青い縦線 */
+    padding-left: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/* タイムラインのポインター（黄色い丸） */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #fecc00;
+    border-radius: 50%;
+}
+
+.timeline-item .date {
+    display: block;
+    font-weight: bold;
+    color: #006aa7;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.timeline-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* =================================================
+   レスポンシブ：スマホ表示（画面幅768px以下）
+   ================================================= */
+@media (max-width: 768px) {
+    .profile-flex-container,
+    .profile-flex-container.reverse {
+        flex-direction: column; /* スマホでは縦一列にする */
+        gap: 30px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 30px auto; /* 写真を中央寄せにして下に余白 */
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+/* タイムライン項目内での横並び設定 */
+.timeline-item.content-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* 文章と写真の間隔 */
+}
+
+/* 文章の幅 */
+.item-text {
+    flex: 1;
+}
+
+/* 小さな写真のサイズ設定 */
+.item-photo {
+    flex: 0 0 250px; /* 写真の幅を小さく設定（お好みで150px〜200px程度） */
+    margin-top: 10px;
+}
+
+.item-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 8px 8px 0px #fecc00; /* 小さい写真に合わせて影も少し細めに */
+}
+
+/* スマホでは縦に並べて写真を出しやすくする */
+@media (max-width: 600px) {
+    .timeline-item.content-flex {
+        flex-direction: column;
+    }
+    .item-photo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+/* ヘッダー全体のレイアウト（グレーの例を再現） */
+.site-header {
+    width: 100%;
+    height: 80px; /* 横長のすっきりした高さ */
+    background-color: #006aa7; /* 背景を青に（グレーから変更） */
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* これで左ロゴ・右メニューに分かれます */
+    align-items: center;
+}
+
+/* 左側のロゴ部分 */
+.header-logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fecc00; /* 黄色い文字 */
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* 右側のメニュー部分 */
+.header-nav {
+    display: flex;
+    gap: 30px; /* メニュー間の間隔 */
+}
+
+.header-nav a {
+    color: #fecc00; /* 黄色い文字 */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #fff; /* ホバーで白に */
+    transform: translateY(-3px); /* 上にピコッと動く */
+}
+
+/* ヘッダー下のヒーロー画像（もし置く場合） */
+.page-hero {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.page-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ロゴエリアの設定 */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo a {
+    display: block;
+    height: 60px; /* ヘッダーの高さ(80px)に合わせて調整 */
+}
+
+.header-logo img {
+    height: 100%;  /* 親要素(aタグ)の高さに合わせる */
+    width: auto;   /* 横幅は自動計算して歪ませない */
+    transition: transform 0.3s ease;
+}
+
+/* アイコンにマウスを乗せた時に少し大きくする演出（お好みで） */
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+/* ロゴを丸くする設定 */
+.logo-circle {
+    /* 強制的にサイズを固定 */
+    width: 80px !important;
+    height: 80px !important;
+
+    /* 他の設定はそのまま */
+    border-radius: 50% !important;
+    object-fit: cover !important;
+
+    /* ここを調整：3pxを5pxにするともっと太くなります */
+    border: 0.6px solid #fecc00 !important; 
+    
+    /* 重要：画像と線の間に少し隙間が欲しい場合は、paddingを入れます */
+    padding: 2px !important;
+    background-color: #fecc00 !important; /* 隙間も黄色で埋める場合 */
+    
+    /* 強制的に丸くする */
+    border-radius: 50% !important;
+    
+    /* 切り抜き設定 */
+    object-fit: cover !important;
+    
+    /* 念のため余計な余白を消す */
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/* マウスを乗せた時の動き */
+.logo-link:hover .logo-circle {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    border-color: #fff; /* ホバー時に縁の色を変えるとおしゃれです */
+}
+
+/* ヘッダー内での配置調整 */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+.page-hero {
+    position: relative; /* 文字を配置する基準にします */
+    width: 100%;
+    height: 400px;     /* 高さは好みに合わせて調整 */
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 写真を枠いっぱいに綺麗に広げる */
+    /* 写真を少し暗くすると文字が浮き出て自然に見えます */
+   
+}
+
+.hero-text-container {
+    position: absolute;
+    top: 20%;          /* 上から50%の位置 */
+    left: 34%;         /* 左から50%の位置 */
+    transform: translate(-50%, -50%); /* ぴったり真ん中にずらす */
+    text-align: center;
+}
+
+.hero-title {
+    color: #ffffff;    /* 文字は白 */
+    font-size: 3rem;   /* 大きく存在感を出す */
+    font-family: 'Arial', sans-serif; /* お好みのフォントで */
+    letter-spacing: 0.1em; /* 文字の間隔を少し空けるとおしゃれ */
+    text-transform: uppercase; /* 大文字にする */
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* 文字に薄い影をつけて読みやすく */
+}
+/* Favorites全体のレイアウト */
+.favorites-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: #006aa7;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* カードを横に並べる（スマホでは縦になる） */
+.fav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* カードのデザイン */
+.fav-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.fav-card:hover {
+    transform: translateY(-10px); /* 浮き上がる演出 */
+}
+
+.fav-img-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.fav-card h3 {
+    color: #006aa7;
+    margin: 20px 0 10px;
+}
+
+.fav-card p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+/* 共通の設定（これは今のまま） */
+.logo-circle, .hero-img {
+    object-fit: cover;
+}
+/* ヒーロー画像専用の調整 */
+.hero-pos-bottom {
+    object-position: center 32%;
+}
+/* 1. 親要素で真ん中に寄せる */
+.connect-container {
+    display: flex;
+    flex-direction: column;  /* 縦並びにする */
+    align-items: center;     /* ★重要：これで中身を「横方向の真ん中」へ */
+    text-align: center;      /* ★重要：これで「文章の行」を真ん中へ */
+    width: 100%;             /* 全幅を使って真ん中を計算させる */
+}
+
+/* 2. リンク（文字）を大きくする */
+.instagram-link {
+    font-size: 10rem;        /* 文字の大きさ（数値はお好みで） */
+    font-weight: bold;        /* 太字にする */
+    text-decoration: none;    /* 下線を消す */
+    color: #E1306C;           /* インスタっぽい色（任意） */
+    
+   
+}
+
+/* マウスを乗せた時の動き（おまけ） */
+.instagram-link:hover {
+    opacity: 0.7;
+    transform: scale(1.1);    /* 少し大きく膨らむ */
+    transition: 0.3s;
+}
+/* 外側の枠組み */
+.connect-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 横方向の真ん中 */
+    padding: 60px 0;
+}
+
+/* アイコンと文章をまとめる箱 */
+.connect-container {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center;    /* 中身をすべて中央寄せ */
+    text-align: center;     /* 文章の行も中央寄せ */
+    max-width: 600px;       /* 文章が広がりすぎないように */
+}
+
+/* アイコンの調整 */
+.insta-link i {
+    font-size: 80px;        /* アイコンの大きさ */
+    color: #E1306C;
+    margin-bottom: 20px;    /* アイコンと文章の間の隙間 */
+    transition: transform 0.3s;
+}
+
+.insta-link:hover i {
+    transform: scale(1.1);
+}
+
+/* 説明文の調整 */
+.insta-description p {
+    font-size: 18px;        /* 文章の大きさ */
+    line-height: 1.8;       /* 行間を広くして読みやすく */
+    color: #333;            /* 文字の色 */
+    margin: 0;
+}
+/* セクション全体の中央寄せ */
+.favorite-section {
+    width: 100%;
+    padding: 80px 0;
+    text-align: center; /* タイトルなどを中央に */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-intro {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* カードを並べるグリッド */
+.favorite-grid {
+    display: grid;
+    /* 画面幅に合わせて300pxのカードを並べる（自動で真ん中寄りに配置） */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto; /* グリッド自体を中央寄せ */
+    padding: 0 20px;
+}
+
+/* カードのデザインと浮かぶ演出 */
+.favorite-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; /* 変化をなめらかに */
+}
+
+/* マウスを乗せたときに「浮かぶ」 */
+.favorite-card:hover {
+    transform: translateY(-15px); /* 上に浮かせる */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* 影を強くして浮かんでいる感を出す */
+}
+
+/* 画像の高さ調整 */
+.card-img-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* 写真に合わせて位置を微調整したい場合はここを追加 */
+    object-position: center center; 
+}
+
+.card-content {
+    padding: 25px;
+    text-align: left; /* 文章は左寄せの方が見やすいですが、ここを center にすれば全部真ん中になります */
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.4rem;
+}
+/* 全体の背景：真っ白ではなく、少しグレーかベージュを混ぜる */
+body {
+    background-color: #f9f9f7; /* 落ち着いたオフホワイト */
+    color: #444; /* 文字も真っ黒ではなく、濃いグレーにすると目に優しい */
+}
+
+/* カードのデザインを「浮き立たせる」 */
+.favorite-card {
+    background: #ffffff;
+    border: 1px solid #eee; /* 薄い枠線を追加して上品に */
+    border-radius: 12px; /* 角を少し丸める（丸めすぎない） */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 影をより薄く、繊細に */
+}
+
+/* タイトル部分 */
+.section-title {
+    color: #555;
+    border-bottom: 2px solid #d4c5b2; /* 黄色の代わりに、落ち着いたベージュの線を引く */
+    padding-bottom: 10px;
+}
+.favorite-section {
+    padding: 100px 0; /* 上下の余白をしっかり取る */
+}
+
+.favorite-grid {
+    gap: 40px; /* カード同士の間隔を広げる */
+}
+
+.card-content {
+    padding: 30px; /* カード内の文章周りの余白を増やす */
+}
+/* 詳細ページのコンテンツ幅を絞って読みやすくする */
+.detail-container {
+    max-width: 800px; /* 広がりすぎないように制限 */
+    margin: 0 auto;
+    padding: 60px 20px;
+    line-height: 2; /* 行間を広くしてゆったりさせる */
+    color: #444;
+}
+
+.detail-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+/* サブ画像の並び */
+.detail-sub-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.detail-sub-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 戻るボタンのデザイン */
+.back-button {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #888;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.back-button a:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+.favorite-card {
+    position: relative;
+    z-index: 10;      /* 他の要素より上に持ってくる */
+    cursor: pointer;  /* マウスを乗せた時に指のマークにする */
+}
+
+/* もしカードの中に画像がある場合、画像がクリックを邪魔しないようにする */
+.favorite-card img {
+    pointer-events: none; 
+}
+/* 1. リンクの見た目をリセットする */
+.favorite-card-link {
+    text-decoration: none; /* 下線を消す */
+    color: inherit;        /* 文字の色を元の黒やグレーのままにする */
+    display: block;        /* カード全体の幅をクリック可能にする */
+}
+
+/* 2. マウスを乗せた時の「変な青色」を防ぐ */
+.favorite-card-link:visited, 
+.favorite-card-link:active {
+    color: inherit;
+}
+
+/* 3. もしカードが横にズレたりしたら、これを追加 */
+.favorite-grid {
+    align-items: start;
+}
+/* カードを並べている大枠の設定 */
+.favorite-grid {
+    display: grid;
+    /* auto-fit を使うと隙間を埋めようとして広がるので、具体的に幅を指定するか auto-fill に変えます */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 30px;
+    justify-content: center; /* これでカードを中央に寄せ、広がりすぎを防ぐ */
+}
+
+/* リンク自体の広がりを抑える */
+.favorite-card-link {
+    display: inline-block; /* block ではなく inline-block にして中身に合わせる */
+    text-decoration: none;
+    color: inherit;
+    width: 100%;           /* グリッドの1マス分だけ広がるようにする */
+}
+/* グリッド自体の設定を修正 */
+.favorite-grid {
+    display: grid;
+    /* 1frだと余白を埋めようとするので、auto を混ぜるのがコツです */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); 
+    gap: 10px;
+    justify-content: center; /* カードを中央に寄せる */
+    margin: 0 auto;
+}
+
+/* リンク用のタグが横に広がらないように制限 */
+.favorite-card-link {
+    text-decoration: none; /* 下線を消す */
+    color: inherit;        /* 文字色を戻す */
+    display: block;        /* クリック判定をカード全体に */
+    width: 100%;           /* グリッドの枠内に収める */
+}
+
+/* カード自体の見た目を再固定 */
+.favorite-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 控えめな影で落ち着かせる */
+    height: 100%;          /* 全体の高さを揃える */
+    transition: transform 0.3s ease;
+}
+
+/* ホバーした時だけ少し浮かす */
+.favorite-card-link:hover .favorite-card {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* 詳細ページのベースカラー */
+.detail-page-wrapper {
+    background-color: #fcfcfc; /* 非常に薄いグレー */
+    color: #333;
+}
+
+/* ギャラリーをおしゃれに並べる */
+.detail-gallery {
+    display: flex;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.detail-gallery figure {
+    flex: 1;
+    margin: 0;
+}
+
+.detail-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px; /* 少しだけ角を丸く */
+}
+
+.detail-gallery figcaption {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* 文章の読みやすさ（行間と幅） */
+.text-block {
+    max-width: 650px; /* 横に広がりすぎないように */
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+/* スライド画像専用の指定 */
+.item-photo img {
+    width: 100%;       /* 親要素の幅いっぱいに広げる */
+    max-width: 500px;  /* でも、パソコンで見た時に大きすぎないよう制限する（お好みで調整） */
+    height: auto;      /* 比率を保ったまま高さを自動調整（これで歪まない！） */
+    display: block;
+    margin: 0 auto;    /* 中央寄せ */
+}
+/* インスタカード全体のデザイン */
+.instagram-card {
+    max-width: 350px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-5px); /* 少し浮き上がる */
+}
+
+.insta-link {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ヘッダー部分（アイコンと名前） */
+.insta-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.insta-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #efefef;
+}
+
+.insta-name {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+
+.insta-subtitle {
+    font-size: 11px;
+    color: #8e8e8e;
+}
+
+/* 画像部分（正方形に見せる） */
+.insta-image-mock {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 強制的に正方形にする */
+    overflow: hidden;
+}
+
+.insta-image-mock img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を切り抜いてフィットさせる */
+}
+
+/* フッターボタン */
+.insta-footer {
+    padding: 12px;
+    text-align: center;
+}
+
+.insta-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* カードを並べる親要素の設定 */
+.card-container {
+    display: flex;          /* 横並びにする */
+    justify-content: center; /* 中央に寄せる */
+    gap: 20px;              /* カード同士の隙間 */
+    flex-wrap: wrap;        /* 画面が狭くなったら自動で折り返す（スマホ対応） */
+    padding: 20px;
+}
+
+/* カード自体の横幅を調整（2つ並んでもはみ出さないように） */
+.instagram-card {
+    flex: 1;                /* 伸び縮みできるようにする */
+    min-width: 280px;       /* これ以上は小さくならない幅（スマホ用） */
+    max-width: 350px;       /* これ以上は大きくならない幅（PC用） */
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* =================================================
+   script.js 用アニメーションスタイル
+   ================================================= */
+
+/* 1. スクロールで浮かび上がる要素 */
+.js-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js-fade-in.js-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. ヘッダー：スクロール時に縮めて影をつける */
+header, .site-header {
+    transition: padding 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+}
+header.js-scrolled {
+    padding: 12px 0 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.site-header.js-scrolled {
+    height: 60px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* 3. ファーストビューの文字とボタン */
+.js-hero-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.js-hero-item.js-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. 現在のページのナビリンクを強調 */
+.header-nav a.js-current,
+.header-site-menu a.js-current,
+.footer-site-menu a.js-current {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+/* 5. ページ上部に戻るボタン */
+.js-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #006aa7;
+    color: #fecc00;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 999;
+}
+.js-to-top.js-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.js-to-top:hover {
+    background-color: #fecc00;
+    color: #006aa7;
+}
