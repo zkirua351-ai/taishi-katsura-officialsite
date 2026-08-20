@@ -2,37 +2,41 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Taishi Katsura official website</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="introduce.css">
 </head>
 <body style="background-color: #f7f7f7;"> 
 
-   <header class="site-header">
-    <div class="header-inner">
-        <div class="header-logo">
-            <a href="index.html">
-                <img src="IMG_9388.jpg" alt="Home Logo" class="logo-circle"> 
-
-            </a>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMG_9388.jpg" alt="Home Logo" class="logo-circle"> 
+                </a>
+            </div>
+            <nav class="header-nav">
+                <a href="about.html" data-lang-ja="Introduction" data-lang-en="Introduction">Introduction</a>
+                <a href="favorites.html" data-lang-ja="Favorites" data-lang-en="Favorites">Favorites</a>
+                <a href="seminar.html" data-lang-ja="Seminar" data-lang-en="Seminar">Seminar</a>
+                <a href="connect.html" data-lang-ja="Connect" data-lang-en="Connect">Connect</a>
+            </nav>
+            <!-- 言語切り替えトグルボタン -->
+            <div class="lang-switch">
+                <button id="lang-toggle-ja" class="lang-btn active" onclick="switchLanguage('ja')">JA</button>
+                <span class="lang-divider">/</span>
+                <button id="lang-toggle-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
         </div>
-        <nav class="header-nav">
-            <a href="about.html">Introduction</a>
-            <a href="favorites.html">Favorites</a>
-            <a href="seminar.html">Seminar</a>
-            <a href="connect.html">Connect</a>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<section class="page-hero">
-    <img src="IMG_4877.jpg" alt="Hero Image" class="hero-img hero-pos-bottom">
-    
-    <div class="hero-text-container">
-        <h1 class="hero-title">Seminar</h1>
-    </div>
-</section>
+    <section class="page-hero">
+        <img src="IMG_4877.jpg" alt="Hero Image" class="hero-img hero-pos-bottom">
+        <div class="hero-text-container">
+            <h1 class="hero-title">Seminar</h1>
+        </div>
+    </section>
 
     <main class="about-content">
         <div class="content-inner">
@@ -40,8 +44,14 @@
             <section class="profile-block">
                 <div class="profile-flex-container">
                     <div class="profile-text-content">
-                        <h3>Seminar</h3>
-                        <p> 高井ゼミ23期は25人で活動しています。2年生の秋学期には5人一組に分かれてITについてのプレゼンテーションを行いました。<br><br><今学期行った発表内容><br>①AIについて（前半）<br>②AIについて（後半）<br>③Webデザインについて<br>
+                        <h3 data-lang-ja="Seminar" data-lang-en="Seminar">Seminar</h3>
+                        <p data-lang-ja="高井ゼミ23期は25人で活動しています。2年生の秋学期には5人一組に分かれてITについてのプレゼンテーションを行いました。<br><br>&lt;今学期行った発表内容&gt;<br>①AIについて（前半）<br>②AIについて（後半）<br>③Webデザインについて" 
+                           data-lang-en="The 23rd class of the Takai Seminar consists of 25 students. During the autumn semester of our sophomore year, we divided into groups of five to deliver presentations on IT.<br><br>&lt;Topics Covered This Semester&gt;<br>1. On AI (Part 1)<br>2. On AI (Part 2)<br>3. On Web Design">
+                            高井ゼミ23期は25人で活動しています。2年生の秋学期には5人一組に分かれてITについてのプレゼンテーションを行いました。<br><br>
+                            &lt;今学期行った発表内容&gt;<br>
+                            ①AIについて（前半）<br>
+                            ②AIについて（後半）<br>
+                            ③Webデザインについて
                         </p>
                     </div>
 
@@ -51,81 +61,87 @@
                 </div>
             </section>
 
-          <section class="history-block">
-    <div class="profile-flex-container reverse">
-        <div class="profile-text-content">
-            <h3>My Presentation</h3>
-            <div class="timeline">
-                
-                <div class="timeline-item content-flex">
-                    <div class="item-text">
-                        <span class="date">First</span>
-                        <h4>AIについて（前半）</h4>
-                        <p>1回目と2回目はAIについての発表を2回に分けて行いました。1回目では主にAIブームについての発表を行いました。<br>私は7から10ページの「第一次AIブーム」について発表を行いました。<br>第一次AIブームは人々に革命と希望をもたらしましたが、常識推論や言語理解への複雑な問題に対応できず終わりを迎えました。</p>
-                    </div>
-                   <div class="item-photo">
-    <a href="slide1.pdf" target="_blank">
-        <img src="slide.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
-    </a>
-    <p style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
-        （クリックで全スライドを表示）
-    </p>
-</div>
-                </div>
+            <section class="history-block">
+                <div class="profile-flex-container reverse">
+                    <div class="profile-text-content">
+                        <h3 data-lang-ja="My Presentation" data-lang-en="My Presentations">My Presentation</h3>
+                        <div class="timeline">
+                            
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">First</span>
+                                    <h4 data-lang-ja="AIについて（前半）" data-lang-en="1. On AI (Part 1)">AIについて（前半）</h4>
+                                    <p data-lang-ja="1回目と2回目はAIについての発表を2回に分けて行いました。1回目では主にAIブームについての発表を行いました。<br>私は7から10ページの「第一次AIブーム」について発表を行いました。<br>第一次AIブームは人々に革命と希望をもたらしましたが、常識推論や言語理解への複雑な問題に対応できず終わりを迎えました。" 
+                                       data-lang-en="The first two sessions covered AI across two presentations, with the first focusing mainly on the AI boom.<br>I presented pages 7 through 10, covering the 'First AI Boom'.<br>While the First AI Boom brought revolution and hope, it ultimately came to an end due to its inability to handle complex problems like commonsense reasoning and natural language processing.">
+                                       1回目と2回目はAIについての発表を2回に分けて行いました。1回目では主にAIブームについての発表を行いました。<br>私は7から10ページの「第一次AIブーム」について発表を行いました。<br>第一次AIブームは人々に革命と希望をもたらしましたが、常識推論や言語理解への複雑な問題に対応できず終わりを迎えました。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <a href="slide1.pdf" target="_blank">
+                                        <img src="slide.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
+                                    </a>
+                                    <p data-lang-ja="（クリックで全スライドを表示）" data-lang-en="(Click to view full slide deck)" style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
+                                        （クリックで全スライドを表示）
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="timeline-item content-flex">
-                    <div class="item-text">
-                        <span class="date">Second</span>
-                        <h4>②AIについて（後半）</h4>
-                        <p>2回目は生成AIをはじめとする様々なAIサービスとこれからの発展について発表しました。私は7から10ページの生成AI以外のAIサービスを紹介しました。<br>我々がAI=生成AIと認識してしまうほど生成AIは凄まじい発展を遂げていますが、農業や教育、ビジネスの場においてもAIは幅広く活躍しています。</p>
-                    </div>
-                    <div class="item-photo">
-    <a href="slide2.pdf" target="_blank">
-        <img src="slide2.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
-    </a>
-    <p style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
-        （クリックで全スライドを表示）
-    </p>
-</div>
-                </div>
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Second</span>
+                                    <h4 data-lang-ja="②AIについて（後半）" data-lang-en="2. On AI (Part 2)">②AIについて（後半）</h4>
+                                    <p data-lang-ja="2回目は生成AIをはじめとする様々なAIサービスとこれからの発展について発表しました。私は7から10ページの生成AI以外のAIサービスを紹介しました。<br>我々がAI=生成AIと認識してしまうほど生成AIは凄まじい発展を遂げていますが、農業や教育、ビジネスの場においてもAIは幅広く活躍しています。" 
+                                       data-lang-en="In the second session, we presented various AI services including Generative AI and their future outlook. I introduced AI applications beyond Generative AI on pages 7 through 10.<br>While Generative AI has made dramatic advances—leading many to view AI solely as Generative AI—AI technologies are also widely utilized across fields like agriculture, education, and business.">
+                                       2回目は生成AIをはじめとする様々なAIサービスとこれからの発展について発表しました。私は7から10ページの生成AI以外のAIサービスを紹介しました。<br>我々がAI=生成AIと認識してしまうほど生成AIは凄まじい発展を遂げていますが、農業や教育、ビジネスの場においてもAIは幅広く活躍しています。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <a href="slide2.pdf" target="_blank">
+                                        <img src="slide2.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
+                                    </a>
+                                    <p data-lang-ja="（クリックで全スライドを表示）" data-lang-en="(Click to view full slide deck)" style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
+                                        （クリックで全スライドを表示）
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="timeline-item content-flex">
-                    <div class="item-text">
-                        <span class="date">Final</span>
-                        <h4>Webデザインについて</h4>
-                        <p>3回目はAIから大きく離れ、Webデザインについての発表を行いました。<br>私は6から12ページの視線誘導パターンについて発表しました。<br>Webデザインにおいてレイアウトを決めるということは視線誘導パターンを作るということです。その中でも「F型」「N型」「Z型」の3つが有名なパターンとしてよく使われています。皆さんもWebページを見る機会があったらこのようなデザインが使われているかぜひ確かめてみてください。</p>
-                    </div>
-                    <div class="item-photo">
-    <a href="slide3.pdf" target="_blank">
-        <img src="slide3.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
-    </a>
-    <p style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
-        （クリックで全スライドを表示）
-    </p>
-</div>
-                </div>
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Final</span>
+                                    <h4 data-lang-ja="Webデザインについて" data-lang-en="3. On Web Design">Webデザインについて</h4>
+                                    <p data-lang-ja="3回目はAIから大きく離れ、Webデザインについての発表を行いました。<br>私は6から12ページの視線誘導パターンについて発表しました。<br>Webデザインにおいてレイアウトを決めるということは視線誘導パターンを作るということです。その中でも「F型」「N型」「Z型」の3つが有名なパターンとしてよく使われています。皆さんもWebページを見る機会があったらこのようなデザインが使われているかぜひ確かめてみてください。" 
+                                       data-lang-en="Moving away from AI, our third presentation focused on Web Design.<br>I presented pages 6 through 12, explaining visual reading and scanning patterns.<br>In web design, structuring a layout essentially means guiding the user's eye tracking. The 'F-pattern', 'N-pattern', and 'Z-pattern' are three widely recognized techniques. Keep an eye out for these structures next time you browse a web page!">
+                                       3回目はAIから大きく離れ、Webデザインについての発表を行いました。<br>私は6から12ページの視線誘導パターンについて発表しました。<br>Webデザインにおいてレイアウトを決めるということは視線誘導パターンを作るということです。その中でも「F型」「N型」「Z型」の3つが有名なパターンとしてよく使われています。皆さんもWebページを見る機会があったらこのようなデザインが使われているかぜひ確かめてみてください。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <a href="slide3.pdf" target="_blank">
+                                        <img src="slide3.png" alt="スライド表紙" class="slide-style" style="width: 100%; height: auto; cursor: pointer;">
+                                    </a>
+                                    <p data-lang-ja="（クリックで全スライドを表示）" data-lang-en="(Click to view full slide deck)" style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #666;">
+                                        （クリックで全スライドを表示）
+                                    </p>
+                                </div>
+                            </div>
 
-            </div>
-        </div>
-    </div>
-</section>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
     <footer>
-    <div class="footer-inner">
-        
-       
-        
-        <nav class="footer-site-menu">
-            <a href="about.html">Introduction</a>
-            <a href="favorites.html">Favorites</a>
-            <a href="seminar.html">Seminar</a>
-            <a href="connect.html">Connect</a>
-        </nav>
-    </div>
-</footer>
+        <div class="footer-inner">
+            <nav class="footer-site-menu">
+                <a href="about.html" data-lang-ja="Introduction" data-lang-en="Introduction">Introduction</a>
+                <a href="favorites.html" data-lang-ja="Favorites" data-lang-en="Favorites">Favorites</a>
+                <a href="seminar.html" data-lang-ja="Seminar" data-lang-en="Seminar">Seminar</a>
+                <a href="connect.html" data-lang-ja="Connect" data-lang-en="Connect">Connect</a>
+            </nav>
+        </div>
+    </footer>
 
-<script src="script.js"></script>
-   </body>
+    <script src="script.js"></script>
+</body>
 </html>

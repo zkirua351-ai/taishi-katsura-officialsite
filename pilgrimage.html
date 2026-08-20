@@ -2,144 +2,175 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel - Taishi Katsura official website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilgrimage - Taishi Katsura official website</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="introduce.css">
 </head>
 <body style="background-color: #f7f7f7;"> 
 
-   <header class="site-header">
-    <div class="header-inner">
-        <div class="header-logo">
-            <a href="about.html">
-                <img src="IMG_9388.jpg" alt="Home Logo" class="logo-circle"> 
-            </a>
-        </div>
-        <nav class="header-nav">
-            <a href="about.html">Introduction</a>
-            <a href="favorites.html">Favorites</a>
-            <a href="seminar.html">Seminar</a>
-            <a href="connect.html">Connect</a>
-        </nav>
-    </div>
-</header>
-
-
-
-<main class="about-content">
-    <div class="content-inner">
-        
-        <section class="profile-block">
-            <div class="profile-flex-container">
-                <div class="profile-text-content">
-                    <h3>pilgrimage </h3>
-                    <p> 
-                       基本的にはヨルシカのアルバムのジャケット、MVの撮影地、ライブ映像で出てきた背景の写真などの聖地を巡るために色々なところに行っています。このページでは今まで訪れた聖地を紹介します。<br>右の写真は「横浜・八景島シーパラダイス」です。<br>ここは2021年に行われたヨルシカのライブ「前世」が行われた場所です。<br>まだまだ聖地はいくつもあるのでいつか制覇したいです。
-                    </p>
-                </div>
-                <div class="profile-photo">
-                    <img src="IMG_1809.jpg" alt="横浜">
-                </div>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="about.html">
+                    <img src="IMG_9388.jpg" alt="Home Logo" class="logo-circle"> 
+                </a>
             </div>
-        </section>
+            <nav class="header-nav">
+                <a href="about.html" data-lang-ja="Introduction" data-lang-en="Introduction">Introduction</a>
+                <a href="favorites.html" data-lang-ja="Favorites" data-lang-en="Favorites">Favorites</a>
+                <a href="seminar.html" data-lang-ja="Seminar" data-lang-en="Seminar">Seminar</a>
+                <a href="connect.html" data-lang-ja="Connect" data-lang-en="Connect">Connect</a>
+            </nav>
+            <!-- 言語切り替えトグルボタン -->
+            <div class="lang-switch">
+                <button id="lang-toggle-ja" class="lang-btn active" onclick="switchLanguage('ja')">JA</button>
+                <span class="lang-divider">/</span>
+                <button id="lang-toggle-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </div>
+    </header>
 
-        <section class="history-block">
-            <div class="profile-flex-container reverse">
-                <div class="profile-text-content">
-                    <h3>Memories</h3>
-                    <div class="timeline">
-                        
-                        <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">神奈川県横須賀市</span>
-                                <h4>猿島</h4>
-                                <p>横須賀市沖にある東京湾唯一の自然島で、「パレード」という楽曲のMVの撮影地です。戦時中に要塞として使用されていた島なので、今でも独特な雰囲気が残っています。聖地とは関係なくおすすめスポットなので神奈川県に来た際には是非行ってみてください。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_6149.jpeg" alt="猿島">
-                            </div>
-                        </div>
-                          <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">愛知県常滑市</span>
-                                <h4>登窯広場</h4>
-                                <p>愛知県の常滑市は日本でも有数の窯元であり、今でも日本の代表的なやきものの産地です。ここは「夜行」という楽曲のMVの撮影地です。この広場には展示工房館もあり誰でも無料で入場することができます。外国人観光客も何組か訪れていて、日本の伝統的な文化を体験できる場所でした。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_6150.jpeg" alt="雨晴駅">
-                            </div>
-                        </div>
-                          <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">富山県高岡市</span>
-                                <h4>雨晴駅</h4>
-                                <p>富山県の高岡市にある小さな駅です。ここは「ただ君に晴れ」という楽曲の撮影地です。JR氷見線に乗って行きましたが、電車から日本海が一望できて凄く感動したことを覚えています。電車旅が好きな方には特におすすめの駅です。金沢から一本でいけるので北陸旅行の際にはぜひ行ってみてください。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_6151.jpeg" alt="猿島">
-                            </div>
-                        </div>
-                         
-                          <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">東京都練馬区</span>
-                                <h4>富士見通り</h4>
-                                <p>東京の練馬区にある商店街です。ヨルシカのコンポーザーであるn-bunaさんが昔住んでいた街で、東京の都会のイメージからは大きく離れる雰囲気の街でした。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_6153.jpeg" alt="猿島">
-                            </div>
-                        </div>
-                          <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">スウェーデン</span>
-                                <h4>ストックホルム</h4>
-                                <p>ヨルシカの聖地巡礼の中でも最高難易度を誇るスウェーデンのストックホルムです。n-bunaさんが子供の頃に住んでいたことからヨルシカの大きなルーツになっている街です。ガムラスタンというストックホルムにある旧市街の写真が、アルバム「だから僕は音楽を辞めた」の撮影地になっています。私も年末にようやく行くことができて感無量でした。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_4854.jpeg" alt="猿島">
-                            </div>
-                        </div>
-                         <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">スウェーデン</span>
-                                <h4>ゴットランド島</h4>
-                                <p>バルト海に浮かぶスウェーデン最大の島で、ヨルシカのアルバム「エルマ」のジャケットになっている場所です。ヨルシカの他にもジブリ作品として有名な「魔女の宅急便」のモデル地であることも有名です。宮崎駿監督は70年代にこの島に訪れてこの地を映画のモデルにされました。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_5047.jpeg" alt="猿島">
-                            </div>
-                        </div>
-                         <div class="timeline-item content-flex">
-                            <div class="item-text">
-                                <span class="date">スウェーデン</span>
-                                <h4>ルンド</h4>
-                                <p>スウェーデンの南部にある古都ルンドにあるルンド大聖堂です。デンマークのコペンハーゲンからとても近く、電車で移動しました。人の量も多すぎず、建物はとても綺麗な街で滞在時間こそ短かったものの強く印象に残っています。</p>
-                            </div>
-                            <div class="item-photo">
-                                <img src="IMG_6156.jpeg" alt="猿島">
-                            </div>
-                        </div>
-
+    <main class="about-content">
+        <div class="content-inner">
+            
+            <section class="profile-block">
+                <div class="profile-flex-container">
+                    <div class="profile-text-content">
+                        <h3 data-lang-ja="Pilgrimage" data-lang-en="Pilgrimage">Pilgrimage</h3>
+                        <p data-lang-ja="基本的にはヨルシカのアルバムのジャケット、MVの撮影地、ライブ映像で出てきた背景の写真などの聖地を巡るために色々なところに行っています。このページでは今まで訪れた聖地を紹介します。<br>右の写真は「横浜・八景島シーパラダイス」です。<br>ここは2021年に行われたヨルシカのライブ「前世」が行われた場所です。<br>まだまだ聖地はいくつもあるのでいつか制覇したいです。" 
+                           data-lang-en="I travel to various locations mainly to visit real-life locations featured in Yorushika's album covers, music videos, and live concert visuals. On this page, I introduce the sacred spots I have visited so far.<br>The photo on the right is Yokohama Hakkeijima Sea Paradise, where Yorushika held their online live concert 'Zense' in 2021.<br>There are still many more locations to visit, and I hope to explore them all someday!">
+                            基本的にはヨルシカのアルバムのジャケット、MVの撮影地、ライブ映像で出てきた背景の写真などの聖地を巡るために色々なところに行っています。このページでは今まで訪れた聖地を紹介します。<br>右の写真は「横浜・八景島シーパラダイス」です。<br>ここは2021年に行われたヨルシカのライブ「前世」が行われた場所です。<br>まだまだ聖地はいくつもあるのでいつか制覇したいです。
+                        </p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="IMG_1809.jpg" alt="横浜">
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-</main>
+            </section>
 
-<footer>
-    <div class="footer-inner">
-        <nav class="footer-site-menu">
-            <a href="about.html">Introduction</a>
-            <a href="favorites.html">Favorites</a>
-            <a href="seminar.html">Seminar</a>
-            <a href="connect.html">Connect</a>
-        </nav>
-    </div>
-</footer>
+            <section class="history-block">
+                <div class="profile-flex-container reverse">
+                    <div class="profile-text-content">
+                        <h3 data-lang-ja="Memories" data-lang-en="Memories">Memories</h3>
+                        <div class="timeline">
+                            
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Yokosuka, Kanagawa</span>
+                                    <h4 data-lang-ja="猿島" data-lang-en="Sarushima Island">猿島</h4>
+                                    <p data-lang-ja="横須賀市沖にある東京湾唯一の自然島で、「パレード」という楽曲のMVの撮影地です。戦時中に要塞として使用されていた島なので、今でも独特な雰囲気が残っています。聖地とは関係なくおすすめスポットなので神奈川県に来た際には是非行ってみてください。" 
+                                       data-lang-en="The only natural island in Tokyo Bay, located off Yokosuka City, and the music video location for the song 'Parade.' Used as a fortress during wartime, it retains a uniquely atmosphere today. Even setting aside its significance as a Yorushika spot, it is a fantastic location that I highly recommend visiting in Kanagawa.">
+                                        横須賀市沖にある東京湾唯一の自然島で、「パレード」という楽曲のMVの撮影地です。戦時中に要塞として使用されていた島なので、今でも独特な雰囲気が残っています。聖地とは関係なくおすすめスポットなので神奈川県に来た際には是非行ってみてください。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_6149.jpeg" alt="猿島">
+                                </div>
+                            </div>
 
-<script src="script.js"></script>
-   </body>
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Tokoname, Aichi</span>
+                                    <h4 data-lang-ja="登窯広場" data-lang-en="Noborigama Plaza">登窯広場</h4>
+                                    <p data-lang-ja="愛知県の常滑市は日本でも有数の窯元であり、今でも日本の代表的なやきものの産地です。ここは「夜行」という楽曲のMVの撮影地です。この広場には展示工房館もあり誰でも無料で入場することができます。外国人観光客も何組か訪れていて、日本の伝統的な文化を体験できる場所でした。" 
+                                       data-lang-en="Tokoname City in Aichi Prefecture is one of Japan's leading pottery centers. This area served as the music video filming location for 'Night Journey.' The plaza houses an exhibition craft hall with free admission, offering visitors a wonderful opportunity to experience traditional Japanese pottery culture.">
+                                        愛知県の常滑市は日本でも有数の窯元であり、今でも日本の代表的なやきものの産地です。ここは「夜行」という楽曲のMVの撮影地です。この広場には展示工房館もあり誰でも無料で入場することができます。外国人観光客も何組か訪れていて、日本の伝統的な文化を体験できる場所でした。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_6150.jpeg" alt="登窯広場">
+                                </div>
+                            </div>
+
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Takaoka, Toyama</span>
+                                    <h4 data-lang-ja="雨晴駅" data-lang-en="Amaharashi Station">雨晴駅</h4>
+                                    <p data-lang-ja="富山県の高岡市にある小さな駅です。ここは「ただ君に晴れ」という楽曲の撮影地です。JR氷見線に乗って行きましたが、電車から日本海が一望できて凄く感動したことを覚えています。電車旅が好きな方には特におすすめの駅です。金沢から一本でいけるので北陸旅行の際にはぜひ行ってみてください。" 
+                                       data-lang-en="A small coastal station in Takaoka City, Toyama, and the location featured in 'Just a Sunny Day.' Riding the JR Himi Line offers a breathtaking panoramic view of the Sea of Japan right from the train window. It is accessible directly from Kanazawa, making it a must-visit spot for train travel enthusiasts exploring the Hokuriku region.">
+                                        富山県の高岡市にある小さな駅です。ここは「ただ君に晴れ」という楽曲の撮影地です。JR氷見線に乗って行きましたが、電車から日本海が一望できて凄く感動したことを覚えています。電車旅が好きな方には特におすすめの駅です。金沢から一本でいけるので北陸旅行の際にはぜひ行ってみてください。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_6151.jpeg" alt="雨晴駅">
+                                </div>
+                            </div>
+
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Nerima, Tokyo</span>
+                                    <h4 data-lang-ja="富士見通り" data-lang-en="Fujimi-dori Shopping Street">富士見通り</h4>
+                                    <p data-lang-ja="東京の練馬区にある商店街です。ヨルシカのコンポーザーであるn-bunaさんが昔住んでいた街で、東京の都会のイメージからは大きく離れる雰囲気の街でした。" 
+                                       data-lang-en="A local shopping street in Nerima Ward, Tokyo. This is the neighborhood where n-buna, Yorushika's composer, used to live. It offers a cozy, nostalgic atmosphere that stands in delightful contrast to the typical image of bustling central Tokyo.">
+                                        東京の練馬区にある商店街です。ヨルシカのコンポーザーであるn-bunaさんが昔住んでいた街で、東京の都会のイメージからは大きく離れる雰囲気の街でした。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_6153.jpeg" alt="富士見通り">
+                                </div>
+                            </div>
+
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Sweden🇸🇪</span>
+                                    <h4 data-lang-ja="ストックホルム" data-lang-en="Stockholm">ストックホルム</h4>
+                                    <p data-lang-ja="ヨルシカの聖地巡礼の中でも最高難易度を誇るスウェーデンのストックホルムです。n-bunaさんが子供の頃に住んでいたことからヨルシカの大きなルーツになっている街です。ガムラスタンというストックホルムにある旧市街の写真が、アルバム「だから僕は音楽を辞めた」の撮影地になっています。私も年末にようやく行くことができて感無量でした。" 
+                                       data-lang-en="Stockholm, Sweden—one of the most distant real-life locations for Yorushika fans. Because n-buna lived here during his childhood, the city forms a major root of Yorushika's music. Photos taken in Gamla Stan, the historic old town, were used for the cover of 'That's Why I Gave Up on Music.' Finally visiting this place at the end of the year was an unforgettable experience.">
+                                        ヨルシカの聖地巡礼の中でも最高難易度を誇るスウェーデンのストックホルムです。n-bunaさんが子供の頃に住んでいたことからヨルシカの大きなルーツになっている街です。ガムラスタンというストックホルムにある旧市街の写真が、アルバム「だから僕は音楽を辞めた」の撮影地になっています。私も年末にようやく行くことができて感無量でした。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_4854.jpeg" alt="ストックホルム">
+                                </div>
+                            </div>
+
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Sweden🇸🇪</span>
+                                    <h4 data-lang-ja="ゴットランド島" data-lang-en="Gotland">ゴットランド島</h4>
+                                    <p data-lang-ja="バルト海に浮かぶスウェーデン最大の島で、ヨルシカのアルバム「エルマ」のジャケットになっている場所です。ヨルシカの他にもジブリ作品として有名な「魔女の宅急便」のモデル地であることも有名です。宮崎駿監督は70年代にこの島に訪れてこの地を映画のモデルにされました。" 
+                                       data-lang-en="Sweden's largest island in the Baltic Sea, featured on the album cover of 'Elma.' Beyond its connection to Yorushika, it is also famous as one of the visual inspirations for Studio Ghibli's 'Kiki's Delivery Service,' which Director Hayao Miyazaki visited in the 1970s.">
+                                        バルト海に浮かぶスウェーデン最大の島で、ヨルシカのアルバム「エルマ」のジャケットになっている場所です。ヨルシカの他にもジブリ作品として有名な「魔女の宅急便」のモデル地であることも有名です。宮崎駿監督は70年代にこの島に訪れてこの地を映画のモデルにされました。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_5047.jpeg" alt="ゴットランド島">
+                                </div>
+                            </div>
+
+                            <div class="timeline-item content-flex">
+                                <div class="item-text">
+                                    <span class="date">Sweden🇸🇪</span>
+                                    <h4 data-lang-ja="ルンド" data-lang-en="Lund">ルンド</h4>
+                                    <p data-lang-ja="スウェーデンの南部にある古都ルンドにあるルンド大聖堂です。デンマークのコペンハーゲンからとても近く、電車で移動しました。人の量も多すぎず、建物はとても綺麗な街で滞在時間こそ短かったものの強く印象に残っています。" 
+                                       data-lang-en="Lund Cathedral in the historic city of Lund, southern Sweden. Located very close to Copenhagen, Denmark, I traveled there by train. Although my stay was brief, the charming architecture and peaceful townscape left a lasting impression.">
+                                        スウェーデンの南部にある古都ルンドにあるルンド大聖堂です。デンマークのコペンハーゲンからとても近く、電車で移動しました。人の量も多すぎず、建物はとても綺麗な街で滞在時間こそ短かったものの強く印象に残っています。
+                                    </p>
+                                </div>
+                                <div class="item-photo">
+                                    <img src="IMG_6156.jpeg" alt="ルンド">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <nav class="footer-site-menu">
+                <a href="about.html" data-lang-ja="Introduction" data-lang-en="Introduction">Introduction</a>
+                <a href="favorites.html" data-lang-ja="Favorites" data-lang-en="Favorites">Favorites</a>
+                <a href="seminar.html" data-lang-ja="Seminar" data-lang-en="Seminar">Seminar</a>
+                <a href="connect.html" data-lang-ja="Connect" data-lang-en="Connect">Connect</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

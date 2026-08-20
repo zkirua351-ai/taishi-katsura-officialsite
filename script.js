@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ------------------------------------------------- */
   document.querySelectorAll('.timeline').forEach(timeline => {
     const items = timeline.querySelectorAll('.timeline-item');
+
     items.forEach((item, index) => {
       item.style.transitionDelay = `${index * 0.12}s`;
     });
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.classList.remove('js-scrolled');
       }
     };
+
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
@@ -61,10 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
      4. トップページのファーストビューを順番に表示
   ------------------------------------------------- */
   const firstViewText = document.querySelector('.first-view-text');
+
   if (firstViewText) {
     const children = firstViewText.querySelectorAll('h1, p, a.btn');
+
     children.forEach((el, index) => {
       el.classList.add('js-hero-item');
+
       setTimeout(() => {
         el.classList.add('js-visible');
       }, 200 + index * 250);
@@ -76,9 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
      5. 現在のページのナビリンクをハイライト
   ------------------------------------------------- */
   const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.header-nav a, .header-site-menu a, .footer-site-menu a')
+
+  document
+    .querySelectorAll(
+      '.header-nav a, .header-site-menu a, .footer-site-menu a'
+    )
     .forEach(link => {
       const linkPage = link.getAttribute('href');
+
       if (linkPage === currentPage) {
         link.classList.add('js-current');
       }
@@ -89,9 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
      6. ページ上部に戻るボタン
   ------------------------------------------------- */
   const toTopBtn = document.createElement('button');
+
   toTopBtn.textContent = '↑';
   toTopBtn.className = 'js-to-top';
   toTopBtn.setAttribute('aria-label', 'ページ上部へ戻る');
+
   document.body.appendChild(toTopBtn);
 
   window.addEventListener('scroll', () => {
@@ -103,7 +115,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   toTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 
 });
+
+
+// =================================================
+// 7. 言語切り替え
+// =================================================
+function switchLanguage(lang) {
+  const elements = document.querySelectorAll(
+    '[data-lang-ja][data-lang-en]'
+  );
+
+  elements.forEach(element => {
+    if (lang === 'ja') {
+      element.innerHTML = element.getAttribute('data-lang-ja');
+    }
+
+    if (lang === 'en') {
+      element.innerHTML = element.getAttribute('data-lang-en');
+    }
+  });
+
+  const jaButton = document.getElementById('lang-toggle-ja');
+  const enButton = document.getElementById('lang-toggle-en');
+
+  if (jaButton && enButton) {
+    if (lang === 'ja') {
+      jaButton.classList.add('active');
+      enButton.classList.remove('active');
+    }
+
+    if (lang === 'en') {
+      jaButton.classList.remove('active');
+      enButton.classList.add('active');
+    }
+  }
+
+  document.documentElement.lang = lang;
+}
