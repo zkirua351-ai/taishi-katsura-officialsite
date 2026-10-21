@@ -1244,3 +1244,148 @@ header.js-scrolled {
 .lang-divider {
     display: none;
 }
+/* =================================================
+   スマホ対応（画面幅768px以下）
+   ================================================= */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* ヘッダー：ロゴの下にメニューを中央寄せで並べる */
+    header {
+        padding: 14px 0;
+    }
+    .header-inner {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 16px;
+        width: auto;
+    }
+    .header-site-menu,
+    .header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+    }
+    .header-site-menu a {
+        margin-left: 0;
+        font-size: 0.95rem;
+    }
+    .header-nav a {
+        font-size: 0.95rem;
+    }
+    .site-header {
+        height: auto;
+        padding: 12px 0;
+    }
+    .header-logo img,
+    .logo-circle {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    /* トップの写真と見出し */
+    .first-view {
+        height: auto;
+        min-height: 70vh;
+    }
+    .first-view-text {
+        padding: 0 20px;
+        text-align: center;
+    }
+    .first-view-text h1 {
+        font-size: 2.6rem;
+    }
+    .first-view-text p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    .btn {
+        padding: 12px 32px;
+    }
+
+    /* フッター */
+    footer {
+        padding: 40px 0 30px;
+    }
+    .footer-site-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 0 16px;
+    }
+    .footer-site-menu a {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    /* 自己紹介ページ：写真と文章を縦に並べる */
+    .about-page-layout {
+        flex-direction: column;
+    }
+    .about-visual {
+        position: relative;
+        height: 50vh;
+    }
+    .visual-overlay {
+        left: 20px;
+        bottom: 20px;
+    }
+    .about-content {
+        padding: 50px 16px;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    /* ページ上部のヒーロー画像 */
+    .page-hero {
+        height: 220px;
+    }
+    .hero-text-container {
+        top: 50%;
+        left: 50%;
+        width: 90%;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    /* お気に入りページ */
+    .favorite-grid,
+    .fav-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+    .favorite-section {
+        padding: 50px 0;
+    }
+    .section-title,
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    /* 詳細ページ */
+    .detail-gallery {
+        flex-direction: column;
+    }
+    .detail-gallery img {
+        height: 220px;
+    }
+    .detail-container {
+        padding: 40px 16px;
+    }
+
+    /* Connectページ */
+    .instagram-link {
+        font-size: 3rem;
+    }
+    .instagram-card {
+        min-width: 0;
+        width: 100%;
+    }
+}

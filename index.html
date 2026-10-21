@@ -2,24 +2,36 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taishi Katsura official site</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="introduce.css">
     <style>
-       
         :root {
-            --main-color: #006aa7;   
-            --accent-color: #fecc00; 
+            --main-color: #006aa7;
+            --accent-color: #fecc00;
         }
-        
+
+        /* 画像が画面幅を超えないようにする */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
             padding: 10px 5%;
             background-color: var(--main-color);
             border-bottom: 4px solid #005a8e;
+        }
+
+        .header-site-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .header-site-menu a {
@@ -36,51 +48,78 @@
             height: 80px;
             object-fit: cover;
         }
+
+        .footer-site-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        /* スマホ幅（600px以下）のとき */
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 16px;
+            }
+
+            .header-logo img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .header-site-menu {
+                justify-content: center;
+                gap: 12px 18px;
+            }
+
+            .header-site-menu a {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
-   <header>
+<header>
     <div class="header-inner">
         <div class="header-logo">
             <img src="IMG_9388.jpg" alt="Logo">
         </div>
         <nav class="header-site-menu">
-            <a data-lang-ja="" data-lang-en=""href="about.html">Introduction</a>
-            <a data-lang-ja="" data-lang-en=""href="favorites.html">Favorites</a>
-            <a data-lang-ja="" data-lang-en=""href="seminar.html">Seminar</a>
-            <a data-lang-ja="" data-lang-en=""href="connect.html">Connect</a>
+            <a data-lang-ja="" data-lang-en="" href="about.html">Introduction</a>
+            <a data-lang-ja="" data-lang-en="" href="favorites.html">Favorites</a>
+            <a data-lang-ja="" data-lang-en="" href="seminar.html">Seminar</a>
+            <a data-lang-ja="" data-lang-en="" href="connect.html">Connect</a>
         </nav>
     </div>
 </header>
 
-    <div class="first-view">
-        <div class="first-view-text">
-            <h1 data-lang-ja="" data-lang-en="">Välkommen!</h1>
-            <p data-lang-ja="" data-lang-en"">Welcome to my gallery!!</p>
-           <a data-lang-ja="" data-lang-en=""href="about.html" class="btn">Introduction</a>
-        </div>
+<div class="first-view">
+    <div class="first-view-text">
+        <h1 data-lang-ja="" data-lang-en="">Välkommen!</h1>
+        <p data-lang-ja="" data-lang-en="">Welcome to my gallery!!</p>
+        <a data-lang-ja="" data-lang-en="" href="about.html" class="btn">Introduction</a>
     </div>
+</div>
 
-    <div class="main">
-        <section id="about">
-            </section>
-    </div>
+<div class="main">
+    <section id="about">
+    </section>
+</div>
+
 <footer>
     <div class="footer-inner">
-        
-       
-        
         <nav class="footer-site-menu">
-            <a data-lang-ja="" data-lang-en=""href="about.html">Introduction</a>
-            <a data-lang-ja="" data-lang-en=""href="favorites.html">Favorites</a>
-            <a data-lang-ja="" data-lang-en=""href="seminar.html">Seminar</a>
-            <a data-lang-ja="" data-lang-en=""href="connect.html">Connect</a>
+            <a data-lang-ja="" data-lang-en="" href="about.html">Introduction</a>
+            <a data-lang-ja="" data-lang-en="" href="favorites.html">Favorites</a>
+            <a data-lang-ja="" data-lang-en="" href="seminar.html">Seminar</a>
+            <a data-lang-ja="" data-lang-en="" href="connect.html">Connect</a>
         </nav>
     </div>
 </footer>
 
-
 <script src="script.js"></script>
-   </body>
+</body>
 </html>
